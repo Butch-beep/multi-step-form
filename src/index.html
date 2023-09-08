@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Multi-step Form</title>
-    <script src="./script.js" defer></script>
+    <script type="module" src="./script.js" defer></script>
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
   <body class="desktop:flex desktop:justify-center desktop:items-center">
@@ -116,6 +116,7 @@
                 >Name
                 <input
                   class="main user-name__input mt-1 block border border-gray-300 w-full rounded py-2 px-3"
+                  type="text"
                   id="name"
                   placeholder="e.g. Butch Melvin Cortez"
                 />
@@ -125,17 +126,44 @@
                 <input
                   class="main email-address__input mt-1 block border border-gray-300 w-full rounded py-2 px-3"
                   id="email"
+                  type="email"
                   placeholder="e.g. butchcortez.bmc@gmail.com"
+                  pattern=".+@gmail.com"
                 />
               </label>
               <label class="main phone-number__label"
                 >Phone Number
                 <input
                   class="main phone-number__input mt-1 block border border-gray-300 w-full rounded py-2 px-3"
+                  type="number"
+                  min="11"
+                  max="11"
                   id="phoneNumber"
                   placeholder="e.g. 09760333691"
                 />
               </label>
+            </div>
+            <div class="main step-one__error">
+              <p class="error__invalid-name hidden text-red-500 font-semibold">
+                Name should begin and only contain letters!
+              </p>
+              <p class="error__empty-name hidden text-red-500 font-semibold">
+                Please fill the name field!
+              </p>
+              <p class="error__invalid-email hidden text-red-500 font-semibold">
+                Email must have @ symbol!
+              </p>
+              <p class="error__empty-email hidden text-red-500 font-semibold">
+                Please fill the email field!
+              </p>
+              <p class="error__empty-number hidden text-red-500 font-semibold">
+                Please fill the phone number field!
+              </p>
+              <p
+                class="error__invalid-number hidden text-red-500 font-semibold"
+              >
+                Number must be 11 digits!
+              </p>
             </div>
           </div>
           <div class="main step-two content__container flex-col gap-5 hidden">
@@ -150,7 +178,7 @@
                 class="main plan__container flex flex-col gap-3 desktop:flex-row desktop:h-max"
               >
                 <button
-                  class="main plan plan__arcade flex flex-row p-4 gap-5 rounded-md border-gray-300 items-center border desktop:w-1/3 desktop:flex desktop:flex-col desktop:justify-between desktop:items-start"
+                  class="main plan plan__arcade flex flex-row border-2 p-4 gap-5 rounded-md items-center desktop:w-1/3 desktop:flex desktop:flex-col desktop:justify-between desktop:items-start"
                   id="arcade"
                   type="checkbox"
                 >
@@ -166,14 +194,16 @@
                       <p class="main price text-gray-400">$9/mo</p>
                     </div>
                     <div class="flex items-center">
-                      <p class="main free hidden font-semibold text-blue-800">
+                      <p
+                        class="main free hidden font-semibold text-blue-800 hidden"
+                      >
                         2 months free!
                       </p>
                     </div>
                   </div>
                 </button>
                 <button
-                  class="main plan plan__advanced flex flex-row p-4 gap-5 rounded-md border-gray-300 items-center border desktop:w-1/3 desktop:flex desktop:flex-col desktop:justify-between desktop:items-start"
+                  class="main plan plan__advanced flex flex-row p-4 gap-5 rounded-md border-2 items-center desktop:w-1/3 desktop:flex desktop:flex-col desktop:justify-between desktop:items-start"
                   id="advanced"
                   type="checkbox"
                 >
@@ -197,7 +227,7 @@
                   </div>
                 </button>
                 <button
-                  class="main plan plan__pro border flex flex-row p-4 gap-5 rounded-md border-gray-300 items-center desktop:w-1/3 desktop:flex desktop:flex-col desktop:justify-start desktop:items-start"
+                  class="main plan plan__pro flex flex-row p-4 gap-5 rounded-md border-2 items-center desktop:w-1/3 desktop:flex desktop:flex-col desktop:justify-start desktop:items-start"
                   id="pro"
                   type="checkbox"
                 >
@@ -236,6 +266,11 @@
                 </label>
                 <p>Yearly</p>
               </div>
+            </div>
+            <div class="main step-one__error">
+              <p class="error__empty-plan hidden text-red-500 font-semibold">
+                Please pick a plan!
+              </p>
             </div>
           </div>
           <div class="main step-three content__container flex-col gap-5 hidden">
@@ -370,7 +405,26 @@
                   <p class="main breakdown__price font-bold"></p>
                 </div>
                 <hr class="main step-four__break" />
-                <div class="addOns"></div>
+                <div class="addOns flex flex-col gap-5">
+                  <div
+                    class="summary__online-service hidden justify-between align-items text-gray-400"
+                  >
+                    <p>Online service</p>
+                    <p class="font-semibold">+$1/mo</p>
+                  </div>
+                  <div
+                    class="summary__larger-storage hidden justify-between align-items text-gray-400"
+                  >
+                    <p>Larger storage</p>
+                    <p class="font-semibold">+$2/mo</p>
+                  </div>
+                  <div
+                    class="summary__customizable-profile hidden justify-between align-items text-gray-400"
+                  >
+                    <p>Customizable profile</p>
+                    <p class="font-semibold">+$2/mo</p>
+                  </div>
+                </div>
               </div>
               <div class="main step-four__total p-5 flex justify-between">
                 <p class="main step-four__total-text text-gray-400">
@@ -403,7 +457,7 @@
           class="main content__navigation fixed bottom-0 left-0 bg-white w-full py-3 px-8 flex flex-row justify-between desktop:px-0 desktop:relative"
         >
           <button
-            class="main navigation__back w-28 text-gray-500 bg-gray-200 rounded-md"
+            class="main navigation__back w-28 text-gray-500 bg-gray-200 rounded-md invisible"
           >
             Go Back
           </button>
