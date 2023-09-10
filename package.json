@@ -9,5 +9,6 @@
   },
   "scripts": {
     "tailwindcss": "npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
-  }
+  },
+  "type": "module"
 }

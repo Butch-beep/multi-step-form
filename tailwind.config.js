@@ -34,4 +34,5 @@ module.exports = {
     },
   },
   plugins: [],
+  purge: ["./src/components/**/*.{js,jsx}", "./public/index.html"],
 };
