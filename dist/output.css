@@ -780,7 +780,7 @@ video {
 }
 
 .bg-mobile{
-  background-image: url('/assets/images/bg-sidebar-mobile.svg');
+  background-image: url('dist/assets/images/bg-sidebar-mobile.svg');
 }
 
 .bg-contain{
