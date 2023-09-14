@@ -2,35 +2,6 @@ import * as UserInterface from "../utilities/UserInterface.js";
 import * as TransactionService from "../utilities/TransactionService.js";
 import * as Validation from "../utilities/Validation.js";
 
-// Event: Change step using the sidebar
-let sidebarButtonElements = document.querySelectorAll("button.sidebar");
-
-sidebarButtonElements.forEach((elem) => {
-  elem.addEventListener("click", () => {
-    const convert = {
-      "step-one": 1,
-      "step-two": 2,
-      "step-three": 3,
-      "step-four": 4,
-    };
-    UserInterface.setStep(convert[elem.id]);
-
-    const currentStep = UserInterface.getStep();
-
-    // Change background color of sidebar
-    UserInterface.changeBackgroundColor(currentStep);
-
-    // Change content
-    UserInterface.changeContent(currentStep);
-
-    // Change text of next button
-    UserInterface.changeTextOfNext(currentStep);
-
-    // Toggle display of back
-    UserInterface.toggleBack();
-  });
-});
-
 // Event: Next
 document.querySelector(".navigation__next").addEventListener("click", () => {
   const info = {
