@@ -1,5 +1,5 @@
 {
-  "homepage": "http://butchbeep.github.co/multi-step-form"
+  "homepage": "http://butchbeep.github.co/multi-step-form",
   "dependencies": {
     "bootstrap": "^5.3.1"
   },
