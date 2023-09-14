@@ -106,8 +106,8 @@ export function setTotalAddOns(addOns) {
 
   const addOnsPrices = {
     "online-service": 1,
-    "larger-storage": 2,
-    "customizable-profile": 2,
+    "larger-storage": 1,
+    "customizable-profile": 1,
   };
 
   addOnsList.forEach((value) => {
