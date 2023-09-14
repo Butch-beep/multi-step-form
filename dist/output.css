@@ -1054,7 +1054,7 @@ body {
 }
 
 .peer:checked ~ .peer-checked\:bg-check {
-  background-image: url("/assets/images/check.svg");
+  background-image: url("../assets/images/check.svg");
 }
 
 .peer:checked ~ .peer-checked\:after\:translate-x-full::after {
