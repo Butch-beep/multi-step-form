@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        mobile: "url('./assets/images/bg-sidebar-mobile.svg')",
-        desktop: "url('./assets/images/bg-sidebar-desktop.svg')",
-        check: "url('./assets/images/check.svg')",
+        mobile: "url('./src/assetsimages/bg-sidebar-desktop.svg')",
+        desktop: "url('./src/assetsimages/bg-sidebar-desktop.svg')",
+        check: "url('./src/assetsimages/check.svg')",
       },
       borderWidth: {
         1: "1px",
