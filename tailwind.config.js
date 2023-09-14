@@ -4,11 +4,11 @@ module.exports = {
   content: ["./src/**/*.{html,js,tsx}"],
   theme: {
     extend: {
-      backgroundImage: (theme) => ({
+      backgroundImage: {
         mobile: "url('./assets/images/bg-sidebar-mobile.svg')",
         desktop: "url('./assets/images/bg-sidebar-desktop.svg')",
         check: "url('./assets/images/check.svg')",
-      }),
+      },
       borderWidth: {
         1: "1px",
       },
