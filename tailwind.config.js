@@ -35,4 +35,5 @@ module.exports = {
   },
   plugins: [],
   purge: ["./src/components/**/*.{js,jsx}", "./public/index.html"],
+  safelist: ["bg-mobile", "bg-desktop", "bg-check"],
 };
