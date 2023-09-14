@@ -5,9 +5,15 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+<<<<<<< HEAD
         mobile: "url('./assets/images/bg-sidebar-desktop.svg')",
         desktop: "url('./assets/images/bg-sidebar-desktop.svg')",
         check: "url('./assets/images/check.svg')",
+=======
+        mobile: "url('../public/assets/images/bg-sidebar-desktop.svg')",
+        desktop: "url('../public/assets/images/bg-sidebar-desktop.svg')",
+        check: "url('../public/assets/images/check.svg')",
+>>>>>>> 1d3dbb546f41a974be2a64963aab236a55bff6a1
       },
       borderWidth: {
         1: "1px",
